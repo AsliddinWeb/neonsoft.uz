@@ -1,0 +1,42 @@
+# ─── Environment ───────────────────────────────────
+.env
+.env.local
+.env.*.local
+.env.prod
+
+# ─── Python ────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+venv/
+.venv/
+
+# ─── Node ──────────────────────────────────────────
+node_modules/
+dist/
+
+# ─── IDE ───────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# ─── Media uploads ─────────────────────────────────
+neonsoft_backend/media/
+
+# ─── Logs ──────────────────────────────────────────
+*.log
+logs/
+
+# ─── Testing ──────────────────────────────────────
+.coverage
+htmlcov/
+.pytest_cache/
+
+# ─── Docker volumes ───────────────────────────────
+postgres_data/
