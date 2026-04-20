@@ -13,7 +13,7 @@ const router = useRouter()
 onMounted(async () => {
   try {
     const { data } = await servicesApi.list()
-    services.value = data.slice(0, 6)
+    services.value = data.slice(0, 4)
   } finally {
     loading.value = false
   }
@@ -56,7 +56,7 @@ const colors = [
       </div>
 
       <!-- Skeleton -->
-      <div v-if="loading" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div v-if="loading" class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div v-for="i in 6" :key="i" class="rounded-2xl border border-gray-100 dark:border-gray-800 p-7 space-y-3">
           <div class="skeleton h-12 w-12 rounded-xl" />
           <div class="skeleton h-5 w-3/4" />
@@ -65,7 +65,7 @@ const colors = [
       </div>
 
       <!-- Cards -->
-      <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div v-else class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div
           v-for="(svc, i) in services"
           :key="svc.id"

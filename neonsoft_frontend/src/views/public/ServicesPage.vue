@@ -33,7 +33,7 @@ function openRequest(svc: Service) {
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
       <!-- Skeleton -->
-      <div v-if="loading" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div v-if="loading" class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div v-for="i in 6" :key="i" class="rounded-2xl border border-gray-100 dark:border-gray-800 p-6 space-y-3">
           <div class="skeleton h-14 w-14 rounded-2xl" />
           <div class="skeleton h-5 w-3/4" />
@@ -42,7 +42,7 @@ function openRequest(svc: Service) {
         </div>
       </div>
 
-      <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div v-else class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div
           v-for="svc in services"
           :key="svc.id"
